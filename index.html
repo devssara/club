@@ -1,117 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>College Societies</title>
-    <style>
-        html {
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: #4a90e2;
-            color: white;
-            padding: 20px 0;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        h2 {
-            font-weight: normal;
-            margin: 10px 0 0;
-        }
-        .domain-selection {
-            margin: 40px 0;
-        }
-        .domain-box {
-            display: inline-block;
-            width: 200px;
-            padding: 20px;
-            margin: 20px;
-            border: 2px solid #4a90e2;
-            border-radius: 10px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .domain-box:hover {
-            background: #4a90e2;
-            color: white;
-        }
-        .societies-section {
-            padding: 40px 20px;
-        }
-        .society {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-        }
-        .society img {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .society img:hover {
-            transform: scale(1.1);
-        }
-        .society img[title] {
-            cursor: help;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Societies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
+  <!-- HEADER -->
+  <header>
     <h1>Societies</h1>
-    <h2>All your information in one place about clubs</h2>
-</header>
+    <p>All your information in one place about clubs</p>
+  </header>
 
-<div class="domain-selection">
-    <p>Select a domain:</p>
-    <a href="#creative"><div class="domain-box">Creative</div></a>
-    <a href="#tech"><div class="domain-box">Technological</div></a>
-</div>
+  <!-- DOMAIN SELECTION -->
+  <section id="domain-selection">
+    <h2>Select a domain</h2>
+    <div class="domains">
+      <div class="domain-box" data-target="creative">🎨 Creative</div>
+      <div class="domain-box" data-target="technological">💻 Technological</div>
+    </div>
+  </section>
 
-<!-- Creative Societies -->
-<div id="creative" class="societies-section">
-    <h2>Creative Societies</h2>
-    <div class="society">
-        <a href="creative_club1.html">
-            <img src="creative1.png" title="A club for artists and designers" alt="Creative Club 1">
-        </a>
-        <p>Art & Design Club</p>
+  <!-- CREATIVE CLUBS -->
+  <section id="creative" class="club-section hidden">
+    <h2>Creative Clubs</h2>
+    <div class="clubs">
+      <div class="club-card">
+        <h3>Photography Club</h3>
+        <p>Capturing moments and telling stories through the lens.</p>
+      </div>
+      <div class="club-card">
+        <h3>Drama Club</h3>
+        <p>Bringing characters to life on stage.</p>
+      </div>
     </div>
-    <div class="society">
-        <a href="creative_club2.html">
-            <img src="creative2.png" title="Drama and performing arts society" alt="Creative Club 2">
-        </a>
-        <p>Drama Society</p>
-    </div>
-</div>
+    <button class="back-btn">⬅ Back</button>
+  </section>
 
-<!-- Technological Societies -->
-<div id="tech" class="societies-section">
-    <h2>Technological Societies</h2>
-    <div class="society">
-        <a href="tech_club1.html">
-            <img src="tech1.png" title="Robotics and engineering innovations" alt="Tech Club 1">
-        </a>
-        <p>Robotics Club</p>
+  <!-- TECHNOLOGICAL CLUBS -->
+  <section id="technological" class="club-section hidden">
+    <h2>Technological Clubs</h2>
+    <div class="clubs">
+      <div class="club-card">
+        <h3>Coding Club</h3>
+        <p>Exploring programming and building projects together.</p>
+      </div>
+      <div class="club-card">
+        <h3>Robotics Club</h3>
+        <p>Designing, building, and testing robots.</p>
+      </div>
     </div>
-    <div class="society">
-        <a href="tech_club2.html">
-            <img src="tech2.png" title="Coding and software development" alt="Tech Club 2">
-        </a>
-        <p>Coding Club</p>
-    </div>
-</div>
+    <button class="back-btn">⬅ Back</button>
+  </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
